@@ -20,7 +20,8 @@ def set(N, row):
                     set(N, row+1)
                     flag_a[col] = flag_b[row + col] = flag_c[row - col + N - 1] = True
     else:
-        ?
+        ??
+
 
 set(N, 0)
 print(cnt)
