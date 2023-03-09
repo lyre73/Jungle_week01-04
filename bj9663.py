@@ -1,27 +1,38 @@
-# # N-Queen
+# # # N-Queen
+# N = int(input())
+
+# global cnt, pos
+# pos = [None] * N
+# cnt = 0
+
+# def n_queen(i, pos):
+#     global cnt
+#     if can_set(i, pos):
+#         if i == len(pos) - 1:
+#             cnt += 1
+#             # print(pos)
+#         else:
+#             for j in range(len(pos)): # 0, 1, 2, ... , N-1
+#                 pos[i+1] = j
+#                 n_queen(i+1, pos)
+#     else:
+#         return
+
+# def can_set(i, pos): # 계산량? 메모리?를 줄인 flag
+#     # if i == 0:
+#     #     return True
+#     k = 0
+#     flag = True
+#     while k < i and flag: # k = 1, 2, ... , i-1
+#         if pos[k] == pos[i] or abs(pos[k] - pos[i]) == i - k:
+#             flag = False
+#         k += 1
+#     return flag
+
+# n_queen(-1, pos)
+# print(cnt)
+
+
+
 N = int(input())
 
-global cnt, flag_a, flag_b, flag_c
-# pos = [None] * N
-flag_a = [True] * N # 십자로 놓을 수 있는지
-flag_b = [True] * (2 * N - 1) # / 방향으로 놓을 수 있는지
-flag_c = [True] * (2 * N - 1) # \ 방향으로 놓을 수 있는지
-cnt = 0
-
-def set(N, row):
-    global cnt, flag_a, flag_b, flag_c
-    if N <= 6:
-        for col in range(N):
-            if flag_a[col] and flag_b[row + col] and flag_c[row - col + N - 1]:
-                if row == N-1:
-                    cnt += 1
-                else:
-                    flag_a[col] = flag_b[row + col] = flag_c[row - col + N - 1] = False
-                    set(N, row+1)
-                    flag_a[col] = flag_b[row + col] = flag_c[row - col + N - 1] = True
-    else:
-        ??
-
-
-set(N, 0)
-print(cnt)
