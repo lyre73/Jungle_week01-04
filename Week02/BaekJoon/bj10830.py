@@ -44,4 +44,4 @@ mat = [list(map(int, line.split())) for line in sys.stdin.readlines()]
 # 행렬의 원소마다 하나하나 나누고 출력하는 것보다, 미리 1000의 배수를 없애 놓고 그냥 줄 단위로 출력하는 게 더 좋은 출력 방법
 result = mat_power(mat, B)
 for row in result:
-    print(*row) 
+    print(*row)
