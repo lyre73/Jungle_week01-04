@@ -112,16 +112,16 @@ for _ in range(int(input())):
 # import sys
 # input = sys.stdin.readline
 
-stack = []
+# stack = []
 
-for _ in range(int(input())):
-    command = input().rstrip()
-    if command == 'pop': print(stack.pop() if stack else -1)
-    elif command == 'size': print(len(stack))
-    elif command == 'empty': print(+(not stack)) # 와 +- boolean은 바로 출력되는구나
-    elif command == 'top': print(stack[-1] if stack else -1)
-    else: # 와 숫자는 이것만 필요하니까 int(x) 안 해도 되네... 근데 하는 게 빠르네
-        stack.append(command[5:])
+# for _ in range(int(input())):
+#     command = input().rstrip()
+#     if command == 'pop': print(stack.pop() if stack else -1)
+#     elif command == 'size': print(len(stack))
+#     elif command == 'empty': print(+(not stack)) # 와 +- boolean은 바로 출력되는구나
+#     elif command == 'top': print(stack[-1] if stack else -1)
+#     else: # 와 숫자는 이것만 필요하니까 int(x) 안 해도 되네... 근데 하는 게 빠르네
+#         stack.append(command[5:])
 
 
 
