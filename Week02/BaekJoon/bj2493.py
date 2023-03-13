@@ -34,8 +34,7 @@ def sol():
     towers = list(map(int, input().split())) # 전체 탑 높이 데이터
 
     for i in range(N): # 탑 번호마다
-        tower = towers[i] # 그 탑의 높이
-        while stack and towers[stack[-1]] < tower: # 스택이 비어있지 않으며 지금 (가려지지 않은)가장 오른쪽 탑이 지금 보는 탑보다 더 낮은 동안
+        while stack and towers[stack[-1]] < towers[i]: # 스택이 비어있지 않으며 지금 (가려지지 않은)가장 오른쪽 탑이 지금 보는 탑보다 더 낮은 동안
                 stack.pop() # 더 낮은 탑들을 지운다
         if stack: # 스택에 뭔가 남아있으면
              goto[i] = stack[-1] + 1 # 이 탑은 지금 (가려지지 않은)가장 오른쪽 탑으로 간다
