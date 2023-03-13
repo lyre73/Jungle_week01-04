@@ -15,5 +15,4 @@ for _ in range(int(input())):
         rightmin = heapq.heappop(rightheap)
         heapq.heappush(leftheap, -rightmin)
         heapq.heappush(rightheap, leftmax)
-    # print(leftheap, rightheap)
     print(-leftheap[0])
