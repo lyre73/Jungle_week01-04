@@ -56,3 +56,35 @@ while Q:
             Q.append((new_price, num_coins + 1))
 else:
     print(-1)
+
+
+
+
+"""chatGPT code
+from collections import deque
+
+def min_coins_bfs(n, k, coins):
+    visited = [False] * (k + 1)
+    queue = deque([(0, 0)])  # (value, num_coins)
+
+    while queue:
+        value, num_coins = queue.popleft()
+        
+        if value == k:
+            return num_coins
+        
+        for coin in coins:
+            new_value = value + coin
+            
+            if 0 <= new_value <= k and not visited[new_value]:
+                visited[new_value] = True
+                queue.append((new_value, num_coins + 1))
+    
+    return -1
+
+n, k = map(int, input().split())
+coins = [int(input()) for _ in range(n)]
+
+result = min_coins_bfs(n, k, coins)
+print(result)
+"""
