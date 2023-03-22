@@ -28,6 +28,7 @@ print(dp[k] if dp[k] != 10001 else -1)
 
 # 동전 2
 # BFS
+"""비교 없이 한 번만 방문해도 되나? 싶었는데 더 큰 값의 동전이 더 적은 개수로 빠르게 값을 키울 거니까 ㄱㅊ"""
 import sys, collections
 input = sys.stdin.readline
 
