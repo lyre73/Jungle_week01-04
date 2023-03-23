@@ -1,5 +1,5 @@
 # 피보나치 수 2
-# DP, 재귀함수
+# DP, 재귀함수(Top-down)
 import sys
 input = sys.stdin.readline
 
@@ -24,7 +24,7 @@ print(fibonacci(n))
 
 
 # 피보나치 수 2
-# DP, X 재귀
+# DP, X 재귀(Bottom-up)
 import sys
 input = sys.stdin.readline
 
