@@ -1,4 +1,5 @@
 # 피보나치 수 2
+# DP, 재귀함수
 import sys
 input = sys.stdin.readline
 
@@ -18,3 +19,32 @@ def fibonacci(x):
     return dp[x]
 
 print(fibonacci(n))
+
+
+
+
+# 피보나치 수 2
+# DP, X 재귀
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+dp = [0, 1]
+
+for i in range(2, n + 1):
+    dp.append(dp[i-1] + dp[i-2])
+print(dp[n])
+
+
+
+
+# 피보나치 수 2
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+a, b = 0, 1
+
+for i in range(2, n + 1):
+    a, b = b, a + b
+print(b)
