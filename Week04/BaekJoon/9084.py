@@ -1,15 +1,20 @@
 # 동전
-import sys, collections
+import sys
 input = sys.stdin.readline
 
-def cal(coins, now):
-    if now == M:
-        return dp[now]
-    coins
+def cal_coins():
+    int(input())
+    coins = tuple(map(int, input().split()))
+    M = int(input())
+
+    ans = [0] * (M + 1)
+    ans[0] = 1 # 0원일 때의 경우의 수 만들어주기!!
+
+    for coin in coins:
+        for i in range(coin, M + 1):
+            if 0 <= i - coin <= M: # 0 포함하기!!
+                ans[i] += ans[i - coin]
+    return ans[M]
 
 for _ in range(int(input())):
-    N = int(input())
-    coins = list(map(int, input().split()))
-    M = int(input())
-    dp = [0] * (M + 1)
-    cal(coins, M)
+    print(cal_coins())
