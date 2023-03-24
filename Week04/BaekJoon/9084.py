@@ -12,8 +12,8 @@ def cal_coins():
 
     for coin in coins:
         for i in range(coin, M + 1):
-            if 0 <= i - coin <= M: # 0 포함하기!!
-                ans[i] += ans[i - coin]
+            # if 0 <= i - coin <= M: # 0 포함하기!! # 근데 어차피 범위를 저렇게 정해서 필요없었겠다
+            ans[i] += ans[i - coin]
     return ans[M]
 
 for _ in range(int(input())):
